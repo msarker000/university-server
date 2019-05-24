@@ -649,7 +649,9 @@ const server = new ApolloServer({
   resolvers,
   context: request => {
     return request;
-  }
+  },
+    introspection: true,
+    playground: true,
 });
 
 const PORT = process.env.PORT || 4000;
