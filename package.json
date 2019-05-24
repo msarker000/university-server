@@ -11,9 +11,10 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js localhost 4000",
-    "build": "babel src --out-dir dist",
-    "serve": "node dist/server.js"
+    "start": "PORT=4000 nodemon --exec babel-node src/index.js localhost",
+    "build": "babel src --out-dir dist --copy-files",
+    "serve": "node dist/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "devDependencies": {
